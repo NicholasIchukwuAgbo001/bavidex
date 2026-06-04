@@ -285,9 +285,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#070708] text-white font-sans overflow-x-hidden selection:bg-red-600 selection:text-white">
 
-      {/* 3D Parallax space and grid background */}
-      <Interactive3DBackground />
-
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
         
