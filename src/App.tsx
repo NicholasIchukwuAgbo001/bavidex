@@ -1,25 +1,25 @@
 import { useState, useEffect, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  ArrowRight, 
-  MessageSquare, 
-  ChevronDown, 
-  Plus, 
-  Check, 
-  Star, 
-  MapPin, 
-  Mail, 
-  Phone, 
-  Search, 
-  Sparkles, 
-  ShieldCheck, 
-  Truck, 
-  Coins, 
-  Heart, 
-  Facebook, 
-  Instagram, 
-  Twitter, 
-  Youtube, 
+import {
+  ArrowRight,
+  MessageSquare,
+  ChevronDown,
+  Plus,
+  Check,
+  Star,
+  MapPin,
+  Mail,
+  Phone,
+  Search,
+  Sparkles,
+  ShieldCheck,
+  Truck,
+  Coins,
+  Heart,
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
   Info,
   ChevronUp,
   SlidersHorizontal,
@@ -45,17 +45,17 @@ import ContactPage from './components/ContactPage';
 import BavidexLogo from './components/BavidexLogo';
 
 import { Product, CartItem, Testimonial, FAQItem, GalleryItem } from './types';
-import { 
-  PRODUCTS, 
-  CATEGORIES, 
-  TESTIMONIALS, 
-  GALLERY, 
-  FAQS, 
-  STORE_PHONE, 
-  STORE_WHATSAPP_NUMBER, 
-  STORE_EMAIL, 
-  STORE_ADDRESS, 
-  GOOGLE_MAPS_EMBED 
+import {
+  PRODUCTS,
+  CATEGORIES,
+  TESTIMONIALS,
+  GALLERY,
+  FAQS,
+  STORE_PHONE,
+  STORE_WHATSAPP_NUMBER,
+  STORE_EMAIL,
+  STORE_ADDRESS,
+  GOOGLE_MAPS_EMBED
 } from './data/storeData';
 
 export default function App() {
@@ -151,7 +151,7 @@ export default function App() {
       const existingIdx = prev.findIndex(item => item.product.id === product.id);
       let updated: CartItem[];
       if (existingIdx > -1) {
-        updated = prev.map((item, i) => 
+        updated = prev.map((item, i) =>
           i === existingIdx ? { ...item, quantity: item.quantity + quantity } : item
         );
       } else {
@@ -183,7 +183,7 @@ export default function App() {
 
   const handleUpdateCartQuantity = (productId: string, qty: number) => {
     setCartItems(prev => {
-      const updated = prev.map(item => 
+      const updated = prev.map(item =>
         item.product.id === productId ? { ...item, quantity: qty } : item
       );
       saveCartToStorage(updated);
@@ -263,9 +263,9 @@ export default function App() {
 
   // Filtering products list
   const filteredProducts = PRODUCTS.filter(p => {
-    const matchesSearch = searchQuery.trim() === '' || 
-      p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-      p.description.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    const matchesSearch = searchQuery.trim() === '' ||
+      p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       p.category.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesCategory = selectedCategory === 'all' || p.category === selectedCategory;
@@ -284,7 +284,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#070708] text-white font-sans overflow-x-hidden selection:bg-red-600 selection:text-white">
-      
+
       {/* 3D Parallax space and grid background */}
       <Interactive3DBackground />
 
@@ -456,9 +456,9 @@ export default function App() {
       {/* 11. PERSISTENT FOOTER SESSIONS */}
       <footer className="bg-[#040405] border-t border-zinc-900 pt-16 pb-8 text-zinc-500 select-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
-            
+
             {/* Logo Column */}
             <div className="lg:col-span-5 space-y-4">
               <div className="flex items-center gap-2.5">
@@ -473,8 +473,8 @@ export default function App() {
               <p className="text-xs text-zinc-400 font-light leading-relaxed max-w-sm">
                 Nigeria's premier importer and developer of durability-guaranteed residential and commercial gym installations. We represent the absolute crest of luxury and tough performance hardware.
               </p>
-              
-              <div className="flex items-center gap-2 bg-zinc-900/60 p-2 rounded-lg border border-zinc-850 inline-flex w-fit">
+
+              <div className="inline-flex items-center gap-2 bg-zinc-900/60 p-2 rounded-lg border border-zinc-850 w-fit">
                 <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
                 <span className="text-[10px] text-zinc-350 font-bold font-mono">4.9 / 5.0 Rating based on verified Lekki reviews</span>
               </div>

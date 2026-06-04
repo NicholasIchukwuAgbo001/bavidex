@@ -33,7 +33,7 @@ export default function ShopPage({
   return (
     <section className="py-12 bg-[#070708] min-h-[calc(100vh-120px)] pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Title */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-red-500 text-xs font-black tracking-widest uppercase block mb-1">
@@ -49,7 +49,7 @@ export default function ShopPage({
 
         {/* Search, Filter Category and Price control pill widgets */}
         <div className="bg-zinc-900/40 border border-zinc-850 rounded-2xl p-4 mb-10 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
-          
+
           {/* Category Quick Filter Select list */}
           <div className="flex flex-wrap items-center gap-1.5">
             <span className="text-[10px] uppercase font-bold text-zinc-500 tracking-wider h-fit mr-1.5 flex items-center gap-1">
@@ -60,11 +60,10 @@ export default function ShopPage({
               <button
                 key={c.id}
                 onClick={() => setSelectedCategory(c.id)}
-                className={`px-3 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider transition-all select-none cursor-pointer ${
-                  selectedCategory === c.id
-                    ? 'bg-red-600 text-white'
-                    : 'bg-zinc-950 text-zinc-400 hover:text-white hover:bg-zinc-900'
-                }`}
+                className={`px-3 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider transition-all select-none cursor-pointer ${selectedCategory === c.id
+                  ? 'bg-red-600 text-white'
+                  : 'bg-zinc-950 text-zinc-400 hover:text-white hover:bg-zinc-900'
+                  }`}
               >
                 {c.name}
               </button>
@@ -122,8 +121,8 @@ export default function ShopPage({
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProducts.map((p) => (
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+            {filteredProducts.filter(Boolean).map((p) => (
               <ProductCard
                 key={p.id}
                 product={p}
@@ -137,7 +136,7 @@ export default function ShopPage({
         )}
 
         {/* Cash On Delivery / Guarantee message banner for Nigerians */}
-        <div className="mt-16 bg-gradient-to-r from-red-950/20 via-zinc-900/40 to-transparent border border-zinc-850 p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left justify-between">
+        <div className="mt-16 bg-linear-to-r from-red-950/20 via-zinc-900/40 to-transparent border border-zinc-850 p-6 rounded-2xl flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left justify-between">
           <div className="flex items-center gap-3">
             <span className="text-3xl">🇳🇬</span>
             <div>

@@ -33,8 +33,8 @@ export default function HomePage({
       <section className="relative min-h-[calc(100vh-112px)] flex items-center justify-center overflow-hidden py-12">
         {/* Background photo under dark tinted gradient overlays */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-[#070708] z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#070708] via-transparent to-transparent z-10" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/85 via-black/70 to-[#070708] z-10" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#070708] via-transparent to-transparent z-10" />
           <img
             src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1920&auto=format&fit=crop"
             alt="Premium Gym Equipment"
@@ -54,7 +54,7 @@ export default function HomePage({
             {/* Giant Title display heading */}
             <h1 className="text-4xl sm:text-7xl font-black uppercase tracking-tight text-white leading-none mb-6 font-display">
               Transform Your <br className="hidden sm:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-white">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 via-red-500 to-white">
                 Fitness Journey
               </span> <br className="hidden sm:inline" />
               With Premium Gym Equipment.
@@ -106,8 +106,8 @@ export default function HomePage({
         </div>
 
         {/* Dynamic scroll indicator banner at bottom border */}
-        <button 
-          onClick={() => onChangePage('shop')} 
+        <button
+          onClick={() => onChangePage('shop')}
           className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-60 animate-bounce select-none cursor-pointer"
         >
           <span className="text-[9px] uppercase tracking-[0.25em] font-extrabold text-zinc-500 font-mono">EXPLORE CACHED CATALOG</span>
@@ -118,7 +118,7 @@ export default function HomePage({
       {/* 2. CHOOSE CATEGORY SLIDERS - Fast filter shortcuts to instantly target specific grids */}
       <section className="py-16 bg-zinc-950 border-t border-zinc-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
             <div>
               <span className="text-[10px] uppercase font-black tracking-widest text-red-500 block mb-1">
@@ -137,13 +137,13 @@ export default function HomePage({
             {CATEGORIES.map((cat) => {
               return (
                 <button
-                   key={cat.id}
+                  key={cat.id}
                   onClick={() => onCategorySelect(cat.id)}
                   className="relative p-4 rounded-xl flex flex-col justify-between items-start text-left overflow-hidden min-h-[140px] border transition-all cursor-pointer select-none group bg-zinc-900/60 border-zinc-850 hover:border-zinc-700/80"
                 >
                   {/* Category icon banner */}
                   <span className="text-2xl sm:text-3xl filter saturate-120 drop-shadow-md mb-2">{cat.symbol}</span>
-                  
+
                   <div>
                     <h3 className="font-extrabold text-xs sm:text-sm uppercase tracking-wider text-white leading-tight group-hover:text-red-500 transition-colors">
                       {cat.name}
@@ -205,7 +205,7 @@ export default function HomePage({
       {/* 4. WHY CHOOSE US - Trust builders structural grids with fine icons */}
       <section className="py-20 bg-zinc-900/30 border-t border-zinc-900/60 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-red-500 text-xs font-black tracking-widest uppercase block mb-1 text-center">
               THE BAVIDEX STANDARD
