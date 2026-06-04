@@ -225,8 +225,8 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 142,
     images: [
-      'https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1598289431512-b97b0917affc?q=80&w=800&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop'
     ],
     description: 'Say goodbye to pinching latex bands. Bavidex Premium high stretch fabric bands combine soft knit comfort with thick non-slip interior rubber grips. Perfect for hip extensions, warmups, and glute target sets.',
     specifications: [
