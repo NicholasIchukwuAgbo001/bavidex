@@ -82,7 +82,7 @@ export default function ProductCard({
       {/* Main Image Stage */}
       <div className="aspect-square relative overflow-hidden bg-zinc-950 cursor-pointer" onClick={() => onQuickView(product)}>
         {/* Fallback shown behind the image if it fails to load */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-950 text-zinc-700 gap-2 pointer-events-none">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-950 text-zinc-700 gap-2">
           <ShoppingCart className="w-10 h-10 opacity-30" />
           <span className="text-[10px] uppercase tracking-widest font-bold opacity-30">No Image</span>
         </div>
@@ -90,7 +90,7 @@ export default function ProductCard({
           src={product.images[currentImageIndex]}
           alt={product.name}
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 relative z-10"
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 relative z-10 bg-zinc-950"
           onError={(e) => {
             const target = e.currentTarget;
             target.onerror = null;

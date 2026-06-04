@@ -291,6 +291,12 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
         
+        html, body {
+          background-color: #070708 !important;
+          margin: 0;
+          padding: 0;
+        }
+        
         body {
           font-family: 'Outfit', sans-serif;
         }
