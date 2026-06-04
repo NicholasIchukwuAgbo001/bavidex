@@ -33,7 +33,6 @@ import CartDrawer from './components/CartDrawer';
 import WishlistDrawer from './components/WishlistDrawer';
 import Lightbox from './components/Lightbox';
 import WhatsAppFloating from './WhatsAppFloating';
-import Interactive3DBackground from './components/Interactive3DBackground';
 
 // Modular Route Page views
 import HomePage from './components/HomePage';
