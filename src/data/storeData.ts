@@ -216,27 +216,6 @@ export const PRODUCTS: Product[] = [
     ],
     stockStatus: 'In Stock'
   },
-  {
-    id: 'p9',
-    name: 'WellCare Multipurpose Adjustable Stepper Bench',
-    category: 'accessories',
-    price: 45000,
-    originalPrice: 55000,
-    rating: 4.7,
-    reviewsCount: 33,
-    images: [
-      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=800&auto=format&fit=crop'
-    ],
-    description: 'Transformable 3-in-1 aerobic configuration: Stepper tool, incline training bench, and standard flat bench support. Outfitted with interior storage compartment to slide in resistance bands and active weight cylinders.',
-    specifications: [
-      'Supports strong static loads up to 150kg',
-      'Dual adjustable heights: 20cm or 35cm profiles',
-      'Non-slip textured surface for safe dynamic jumps',
-      'Quick-click fold-out support legs'
-    ],
-    stockStatus: 'In Stock'
-  }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
