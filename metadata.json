@@ -1,0 +1,6 @@
+{
+  "name": "Bavidex Fitness Store",
+  "description": "A premium, modern, high-converting fitness equipment e-commerce store with interactive product sheets, shopping cart, customizable quotes, and direct WhatsApp order placement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
