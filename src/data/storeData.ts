@@ -217,27 +217,6 @@ export const PRODUCTS: Product[] = [
     stockStatus: 'In Stock'
   },
   {
-    id: 'p8',
-    name: 'Heavy Premium Non-Snap Loop Resistance Bands',
-    category: 'accessories',
-    price: 22000,
-    originalPrice: 30000,
-    rating: 4.9,
-    reviewsCount: 142,
-    images: [
-      'https://images.unsplash.com/photo-1598289431512-b97b0917affc?q=80&w=800&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop'
-    ],
-    description: 'Say goodbye to pinching latex bands. Bavidex Premium high stretch fabric bands combine soft knit comfort with thick non-slip interior rubber grips. Perfect for hip extensions, warmups, and glute target sets.',
-    specifications: [
-      'Premium dynamic fabric mesh (never rolling or snapping)',
-      '3 distinct resistance tiers: Light (15-25 lbs), Medium (25-35 lbs), Heavy (40-50 lbs)',
-      'Breathable double thick knitting technology',
-      'Includes premium mesh carrying case with instructional workout manual'
-    ],
-    stockStatus: 'In Stock'
-  },
-  {
     id: 'p9',
     name: 'WellCare Multipurpose Adjustable Stepper Bench',
     category: 'accessories',
