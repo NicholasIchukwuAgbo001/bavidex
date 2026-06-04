@@ -81,13 +81,23 @@ export default function ProductCard({
 
       {/* Main Image Stage */}
       <div className="aspect-square relative overflow-hidden bg-zinc-950 cursor-pointer" onClick={() => onQuickView(product)}>
+        {/* Fallback shown behind the image if it fails to load */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-950 text-zinc-700 gap-2 pointer-events-none">
+          <ShoppingCart className="w-10 h-10 opacity-30" />
+          <span className="text-[10px] uppercase tracking-widest font-bold opacity-30">No Image</span>
+        </div>
         <img
           src={product.images[currentImageIndex]}
           alt={product.name}
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 relative z-10"
+          onError={(e) => {
+            const target = e.currentTarget;
+            target.onerror = null;
+            target.style.display = 'none';
+          }}
         />
-        
+
         {/* Hover overlay quick controls banner */}
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2">
           {/* Quick View Button */}
@@ -108,9 +118,8 @@ export default function ProductCard({
               e.stopPropagation();
               onAddToWishlist(product);
             }}
-            className={`p-3 rounded-full shadow-lg transition-colors duration-200 ${
-              isWishlisted ? 'bg-red-600 text-white' : 'bg-zinc-900 text-zinc-300 hover:bg-white hover:text-black'
-            }`}
+            className={`p-3 rounded-full shadow-lg transition-colors duration-200 ${isWishlisted ? 'bg-red-600 text-white' : 'bg-zinc-900 text-zinc-300 hover:bg-white hover:text-black'
+              }`}
             title={isWishlisted ? 'Remove from Wishlist' : 'Add to Wishlist'}
           >
             <Heart className={`w-4 h-4 ${isWishlisted ? 'fill-current' : ''}`} />
@@ -123,9 +132,8 @@ export default function ProductCard({
             {product.images.map((_, idx) => (
               <span
                 key={idx}
-                className={`w-1.5 h-1.5 rounded-full transition-all ${
-                  idx === currentImageIndex ? 'bg-red-500 w-3' : 'bg-zinc-600/60'
-                }`}
+                className={`w-1.5 h-1.5 rounded-full transition-all ${idx === currentImageIndex ? 'bg-red-500 w-3' : 'bg-zinc-600/60'
+                  }`}
               />
             ))}
           </div>
@@ -148,7 +156,7 @@ export default function ProductCard({
         </div>
 
         {/* Title */}
-        <h3 
+        <h3
           onClick={() => onQuickView(product)}
           className="font-semibold text-sm sm:text-base text-zinc-100 line-clamp-2 hover:text-red-500 transition-colors cursor-pointer mb-2 leading-tight flex-1"
         >
