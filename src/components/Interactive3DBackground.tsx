@@ -72,7 +72,7 @@ export default function Interactive3DBackground() {
     }
 
     const fov = 400; // Field of view
-    
+
     // Core animation Loop
     const render = () => {
       if (!canvas || !ctx) return;
@@ -101,7 +101,7 @@ export default function Interactive3DBackground() {
         const perspectiveScale = fov / gz;
         const screenYFloor = centerY + gridYOffset * perspectiveScale + mouse.y * 110;
         const screenYCeil = centerY - gridYOffset * perspectiveScale + mouse.y * 110;
-        
+
         ctx.beginPath();
         // Floor line
         ctx.moveTo(centerX - 1200 * perspectiveScale + mouse.x * 110, screenYFloor);
@@ -136,7 +136,7 @@ export default function Interactive3DBackground() {
 
       particles.forEach(p => {
         // Move particle closer on Z axis (flowing space travel simulation)
-        p.z -= 2.2; 
+        p.z -= 2.2;
 
         // If particle moves behind observer, reset to far distance
         if (p.z <= 0) {
@@ -159,7 +159,7 @@ export default function Interactive3DBackground() {
           ctx.arc(px, py, Math.max(0.4, depthSize), 0, Math.PI * 2);
           ctx.fillStyle = p.color;
           ctx.globalAlpha = alphaFactor;
-          
+
           // Draw a soft glowing halo for larger points
           if (depthSize > 2 && p.color.includes('220')) {
             ctx.shadowBlur = 10;
@@ -167,7 +167,7 @@ export default function Interactive3DBackground() {
           } else {
             ctx.shadowBlur = 0;
           }
-          
+
           ctx.fill();
           ctx.globalAlpha = 1.0;
         }
@@ -190,7 +190,7 @@ export default function Interactive3DBackground() {
     <canvas
       ref={canvasRef}
       id="3d-interactive-canvas-bg"
-      className="fixed inset-0 w-full h-full pointer-events-none -z-10 bg-[#070708] opacity-55 mix-blend-screen"
+      className="fixed inset-0 w-full h-full pointer-events-none -z-10 bg-[#070708] opacity-35"
     />
   );
 }
